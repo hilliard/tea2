@@ -1,0 +1,25 @@
+<%= form_for(@reqpriority) do |f| %>
+  <% if @reqpriority.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reqpriority.errors.count, "error") %> prohibited this reqpriority from being saved:</h2>
+
+      <ul>
+      <% @reqpriority.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+
+    <div class="field">
+      <%= f.label :reqpriorityname %><br>
+      <%= f.text_field :reqpriorityname %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+  </div>

@@ -1,0 +1,22 @@
+<%= form_for(@reqdifficulty) do |f| %>
+  <% if @reqdifficulty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reqdifficulty.errors.count, "error") %> prohibited this reqdifficulty from being saved:</h2>
+
+      <ul>
+      <% @reqdifficulty.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="field">
+      <%= f.label :reqdifficultyname %><br>
+      <%= f.text_field :reqdifficultyname %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+  </div>

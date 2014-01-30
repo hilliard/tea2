@@ -1,0 +1,23 @@
+<%= form_for(@reqdevstatus) do |f| %>
+  <% if @reqdevstatus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reqdevstatus.errors.count, "error") %> prohibited this reqdevstatus from being saved:</h2>
+
+      <ul>
+      <% @reqdevstatus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="container">
+    <div class="field">
+      <%= f.label :reqdevstatusname %><br>
+      <%= f.text_field :reqdevstatusname %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+</div>

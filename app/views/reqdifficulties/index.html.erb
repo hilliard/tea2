@@ -1,0 +1,27 @@
+<h1>Listing Requirement Difficulties</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Requirement Difficulty Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reqdifficulties.each do |reqdifficulty| %>
+      <tr>
+        <td><%= reqdifficulty.reqdifficultyname %></td>
+        <td><%= link_to 'Show', reqdifficulty %></td>
+        <td><%= link_to 'Edit', edit_reqdifficulty_path(reqdifficulty) %></td>
+        <td><%= link_to 'Destroy', reqdifficulty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Requirement Difficulty', new_reqdifficulty_path %>

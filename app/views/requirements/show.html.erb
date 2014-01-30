@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Req Title:</strong>
+  <%= @requirement.reqtitle %>
+</p>
+
+<p>
+  <strong>Req Owner:</strong>
+  <%= @requirement.reqowner %>
+</p>
+
+<p>
+  <strong>Req Status:</strong>
+  <%= @requirement.reqstatus %>
+</p>
+
+<p>
+  <strong>Req Priority:</strong>
+  <%= @requirement.reqpriority %>
+</p>
+
+<p>
+  <strong>Req Difficulty:</strong>
+  <%= @requirement.reqdifficulty %>
+</p>
+
+<p>
+  <strong>Req Devstatus:</strong>
+  <%= @requirement.reqdevstatus %>
+</p>
+
+<p>
+  <strong>Req Testcoverage:</strong>
+  <%= @requirement.reqtestcoverage %>
+</p>
+
+<p>
+  <strong>Req Release:</strong>
+  <%= @requirement.reqrelease %>
+</p>
+
+<%= link_to 'Edit', edit_requirement_path(@requirement) %> |
+<%= link_to 'Back', requirements_path %>

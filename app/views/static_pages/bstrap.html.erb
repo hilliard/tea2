@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 101 Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<li id="fat-menu" class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Actions<b class="caret"></b>
+  </a>
+  <ul class ="dropdown-menu">
+
+    <li><%= link_to "Account Settings", account_settings_path %></li>
+    <li><%= link_to "List Users", admin_users_path %></li>
+    <li><%= link_to "Add User", new_user_path %></li>
+
+
+    <li class="divider"></li>
+    <li>
+      <%= link_to "Sign Out", signed_out_path %>
+    </li>
+  </ul>
+</li>
+
+
+<h1>Hello, world!</h1>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="../../../../vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+
+
+<h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
+
+
+<p class="text-muted">muted</p>
+<p class="text-primary">primary</p>
+<p class="text-success">success</p>
+<p class="text-info">info</p>
+<p class="text-warning">warning</p>
+<p class="text-danger">danger</p>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+
+<div class="center hero-unit">
+  <%= link_to image_tag("check0.png", alt: "Check"), 'http://www.clickbank.com' %>
+</div>
+
+<img src="check0.png" alt="round" class="img-rounded">
+<img src="..." alt="circle" class="img-circle">
+<img src="..." alt="thumbnail" class="img-thumbnail">
+
+  <br>
+
+<button type="button" class="close" aria-hidden="true">&times;Click</button>
+
+
+<br>
+
+<span class="caret">Span</span>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reqtitle: MyString
+  reqowner: MyString
+  reqstatus: MyString
+  reqpriority: MyString
+  reqdifficulty: MyString
+  reqdevstatus: MyString
+  reqtestcoverage: MyString
+  reqrelease: MyString
+
+two:
+  reqtitle: MyString
+  reqowner: MyString
+  reqstatus: MyString
+  reqpriority: MyString
+  reqdifficulty: MyString
+  reqdevstatus: MyString
+  reqtestcoverage: MyString
+  reqrelease: MyString

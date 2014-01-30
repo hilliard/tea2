@@ -1,0 +1,27 @@
+<h1>Listing Requirement Statuses</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Reqstatusname</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reqstatuses.each do |reqstatus| %>
+      <tr>
+        <td><%= reqstatus.reqstatusname %></td>
+        <td><%= link_to 'Show', reqstatus %></td>
+        <td><%= link_to 'Edit', edit_reqstatus_path(reqstatus) %></td>
+        <td><%= link_to 'Destroy', reqstatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reqstatus', new_reqstatus_path %>
