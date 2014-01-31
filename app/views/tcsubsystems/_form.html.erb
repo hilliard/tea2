@@ -1,0 +1,23 @@
+<%= form_for(@tcsubsystem) do |f| %>
+  <% if @tcsubsystem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tcsubsystem.errors.count, "error") %> prohibited this tcsubsystem from being saved:</h2>
+
+      <ul>
+      <% @tcsubsystem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="field">
+    <%= f.label "Subsystem" %><br>
+    <%= f.text_field :tcsubsystemname %>
+  </div>
+  <div class="actions">
+    <%= f.submit("Create") %>
+  </div>
+<% end %>
+
+</div>

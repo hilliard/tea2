@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @testcase.tctitle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @testcase.tcdescription %>
+</p>
+
+<p>
+  <strong>Precondition:</strong>
+  <%= @testcase.tcprecondition %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @testcase.tcdata %>
+</p>
+
+<p>
+  <strong>Expected Results:</strong>
+  <%= @testcase.tcexpectedresults %>
+</p>
+
+<p>
+  <strong>Subsystem:</strong>
+  <%= @testcase.tcsubsystem %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @testcase.tcstatus %>
+</p>
+
+<p>
+  <strong>Post Condition:</strong>
+  <%= @testcase.tcpostcondition %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @testcase.tcauthor %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @testcase.tcactive %>
+</p>
+
+<p>
+  <strong>Req Reference:</strong>
+  <%= @testcase.tcreqreference %>
+</p>
+
+<p>
+  <strong>Modified By:</strong>
+  <%= @testcase.tcmodifiedby %>
+</p>
+
+<p>
+  <strong>Exec Date:</strong>
+  <%= @testcase.tcexecdate %>
+</p>
+
+<p>
+  <strong>Start Time:</strong>
+  <%= @testcase.tcstarttime %>
+</p>
+
+<p>
+  <strong>Stop Time:</strong>
+  <%= @testcase.tcstoptime %>
+</p>
+
+<p>
+  <strong>Steps:</strong>
+  <%= @testcase.tcstep %>
+</p>
+
+<%= link_to 'Edit', edit_testcase_path(@testcase) %> |
+<%= link_to 'Back', testcases_path %>

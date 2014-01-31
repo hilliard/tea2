@@ -1,0 +1,98 @@
+<%= form_for(@testcase) do |f| %>
+  <% if @testcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testcase.errors.count, "error") %> prohibited this testcase from being saved:</h2>
+
+      <ul>
+      <% @testcase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <legend><%= "#{ @testcase.tctitle } " unless @testcase.tctitle.nil?  %>Test Case Information</legend>
+
+    <fieldset>
+      <div class="field">
+        <%= f.label "Title" %><br>
+        <%= f.text_field :tctitle %>
+      </div>
+      <div class="field">
+        <%= f.label "Description" %><br>
+        <%= f.text_area :tcdescription %>
+      </div>
+      <div class="field">
+        <%= f.label "Precondition" %><br>
+        <%= f.text_area :tcprecondition %>
+      </div>
+      <div class="field">
+        <%= f.label "Data" %><br>
+        <%= f.text_field :tcdata %>
+      </div>
+      <div class="field">
+        <%= f.label "Expected Results" %><br>
+        <%= f.text_field :tcexpectedresults %>
+      </div>
+      <div class="field">
+        <%= f.label "Subsystem" %><br>
+        <%#= f.text_field :tcsubsystem %>
+        <%= f.collection_select(:tcsubsystem, Tcsubsystem.all, :tcsubsystemname, :tcsubsystemname) %>
+      </div>
+      <div class="field">
+        <%= f.label "Status" %><br>
+        <%#= f.text_field :tcstatus %>
+        <%= f.collection_select(:tcstatus, Tcstatus.all, :tcstatusname, :tcstatusname) %>
+      </div>
+      <div class="field">
+        <%= f.label "Post Condition" %><br>
+        <%= f.text_area :tcpostcondition %>
+      </div>
+      <div class="field">
+        <%= f.label "Author" %><br>
+        <%= f.text_field :tcauthor %>
+      </div>
+      <div class="field">
+        <%= f.label "Active" %><br>
+        <%= f.check_box :tcactive %>
+      </div>
+      <div class="field">
+        <%= f.label "Req Reference" %><br>
+        <%= f.text_field :tcreqreference %>
+      </div>
+      <div class="field">
+        <%= f.label "Modified By" %><br>
+        <%= f.text_field :tcmodifiedby %>
+      </div>
+      <div class="field">
+        <%= f.label "Date Run" %><br>
+        <%= f.date_select :tcexecdate %>
+      </div>
+      <div class="field">
+        <%= f.label "Start Time" %><br>
+        <%= f.datetime_select :tcstarttime %>
+      </div>
+      <div class="field">
+        <%= f.label "Stop Time" %><br>
+        <%= f.datetime_select :tcstoptime %>
+      </div>
+  </fieldset>
+
+    <div class="container">
+      <legend>Steps <%= "That Belong to   #{ @testcase.tctitle }" unless @testcase.tctitle.blank? %></legend>
+      <fieldset>
+        <div class="field">
+          <%= f.label "Steps" %><br>
+          <%= f.text_field :tcstep %>
+        </div>
+    </fieldset>
+      </div>
+
+
+    <div class="center">
+      <%= f.submit("Save Test Case", :class => "btn btn-primary", :title => "Save the changes to this Test Case.") %>
+      <%= link_to("Cancel", testcases_path, :confirm => "Are you sure you want to cancel?  Any changes will be lost.", :class => "btn btn-inverse", :title => "Cancel the changes and return to the Test Case page.") %>
+    </div>
+<% end %>
+
+</div>

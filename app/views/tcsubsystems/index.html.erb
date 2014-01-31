@@ -1,0 +1,27 @@
+<h1>Listing Subsystems</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Subsystem</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tcsubsystems.each do |tcsubsystem| %>
+      <tr>
+        <td><%= tcsubsystem.tcsubsystemname %></td>
+        <td><%= link_to 'Show', tcsubsystem %></td>
+        <td><%= link_to 'Edit', edit_tcsubsystem_path(tcsubsystem) %></td>
+        <td><%= link_to 'Destroy', tcsubsystem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subsystem', new_tcsubsystem_path %>

@@ -1,0 +1,57 @@
+<h1>Listing Testcases</h1>
+
+<table class="table1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Precondition</th>
+      <th>Data</th>
+      <th>Expected Results</th>
+      <th>Subsystem</th>
+      <th>Status</th>
+      <th>Post Condition</th>
+      <th>Author</th>
+      <th>Active?</th>
+      <th>Req Reference</th>
+      <th>Modified By</th>
+      <th>Exec Date</th>
+      <th>Start Time</th>
+      <th>Stop Time</th>
+      <th>Steps</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testcases.each do |testcase| %>
+      <tr>
+        <td><%= testcase.tctitle %></td>
+        <td><%= testcase.tcdescription %></td>
+        <td><%= testcase.tcprecondition %></td>
+        <td><%= testcase.tcdata %></td>
+        <td><%= testcase.tcexpectedresults %></td>
+        <td><%= testcase.tcsubsystem %></td>
+        <td><%= testcase.tcstatus %></td>
+        <td><%= testcase.tcpostcondition %></td>
+        <td><%= testcase.tcauthor %></td>
+        <td><%= testcase.tcactive %></td>
+        <td><%= testcase.tcreqreference %></td>
+        <td><%= testcase.tcmodifiedby %></td>
+        <td><%= testcase.tcexecdate %></td>
+        <td><%= testcase.tcstarttime %></td>
+        <td><%= testcase.tcstoptime %></td>
+        <td><%= testcase.tcstep %></td>
+        <td><%= link_to 'Show', testcase %></td>
+        <td><%= link_to 'Edit', edit_testcase_path(testcase) %></td>
+        <td><%= link_to 'Destroy', testcase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testcase', new_testcase_path %>
