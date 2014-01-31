@@ -1,6 +1,12 @@
 Tea2::Application.routes.draw do
 
 
+  resources :testcases
+
+  resources :tcsubsystems
+
+  resources :tcstatuses
+
   resources :requirements
 
   resources :reqdevstatuses

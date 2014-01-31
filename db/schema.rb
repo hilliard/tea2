@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140130230500) do
+ActiveRecord::Schema.define(version: 20140131220839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,40 @@ ActiveRecord::Schema.define(version: 20140130230500) do
     t.string   "reqdevstatus"
     t.string   "reqtestcoverage"
     t.string   "reqrelease"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "reqtrackid"
+  end
+
+  create_table "tcstatuses", force: true do |t|
+    t.string   "tcstatusname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tcsubsystems", force: true do |t|
+    t.string   "tcsubsystemname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "testcases", force: true do |t|
+    t.string   "tctitle"
+    t.text     "tcdescription"
+    t.text     "tcprecondition"
+    t.string   "tcdata"
+    t.string   "tcexpectedresults"
+    t.string   "tcsubsystem"
+    t.string   "tcstatus"
+    t.text     "tcpostcondition"
+    t.string   "tcauthor"
+    t.boolean  "tcactive"
+    t.string   "tcreqreference"
+    t.string   "tcmodifiedby"
+    t.date     "tcexecdate"
+    t.datetime "tcstarttime"
+    t.datetime "tcstoptime"
+    t.string   "tcstep"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

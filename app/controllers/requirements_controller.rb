@@ -69,6 +69,6 @@ class RequirementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def requirement_params
-      params.require(:requirement).permit(:reqtitle, :reqowner, :reqstatus, :reqpriority, :reqdifficulty, :reqdevstatus, :reqtestcoverage, :reqrelease)
+      params.require(:requirement).permit(:reqtitle, :reqowner, :reqstatus, :reqpriority, :reqdifficulty, :reqdevstatus, :reqtestcoverage, :reqtrackid, :reqrelease)
     end
 end
