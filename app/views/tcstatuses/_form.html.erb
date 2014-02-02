@@ -1,0 +1,23 @@
+<%= form_for(@tcstatus) do |f| %>
+  <% if @tcstatus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tcstatus.errors.count, "error") %> prohibited this tcstatus from being saved:</h2>
+
+      <ul>
+      <% @tcstatus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="field">
+    <%= f.label "Status" %><br>
+    <%= f.text_field :tcstatusname %>
+  </div>
+  <div class="actions">
+    <%= f.submit("Create") %>
+  </div>
+<% end %>
+
+</div>

@@ -1,0 +1,27 @@
+<h1>Listing Test Case Status</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Test Case Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tcstatuses.each do |tcstatus| %>
+      <tr>
+        <td><%= tcstatus.tcstatusname %></td>
+        <td><%= link_to 'Show', tcstatus %></td>
+        <td><%= link_to 'Edit', edit_tcstatus_path(tcstatus) %></td>
+        <td><%= link_to 'Destroy', tcstatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Case Status', new_tcstatus_path %>
