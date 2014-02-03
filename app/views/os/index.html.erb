@@ -1,0 +1,27 @@
+<h1>Listing Os</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operating System Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @os.each do |o| %>
+      <tr>
+        <td><%= o.osname %></td>
+        <td><%= link_to 'Show', o %></td>
+        <td><%= link_to 'Edit', edit_o_path(o) %></td>
+        <td><%= link_to 'Destroy', o, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New OS', new_o_path %>

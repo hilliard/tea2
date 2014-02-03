@@ -1,0 +1,57 @@
+<h1>Listing Test Runs</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Feature</th>
+      <th>Tester</th>
+      <th>Test Type</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>OS</th>
+      <th>Browser</th>
+      <th>Risk</th>
+      <th>Start Time</th>
+      <th>Stop Time</th>
+      <th>Exec Date</th>
+      <th>Requirement</th>
+      <th>Track Id</th>
+      <th>Testcase</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testruns.each do |testrun| %>
+      <tr>
+        <td><%= testrun.trname %></td>
+        <td><%= testrun.trdescription %></td>
+        <td><%= testrun.trfeature %></td>
+        <td><%= testrun.tester %></td>
+        <td><%= testrun.testtype %></td>
+        <td><%= testrun.trstatus %></td>
+        <td><%= testrun.trpriority %></td>
+        <td><%= testrun.tros %></td>
+        <td><%= testrun.trbrowser %></td>
+        <td><%= testrun.trrisk %></td>
+        <td><%= testrun.trstart %></td>
+        <td><%= testrun.trstop %></td>
+        <td><%= testrun.trexecdate %></td>
+        <td><%= testrun.trrequirement %></td>
+        <td><%= testrun.trtrackid %></td>
+        <td><%= testrun.testcase %></td>
+        <td><%= link_to 'Show', testrun %></td>
+        <td><%= link_to 'Edit', edit_testrun_path(testrun) %></td>
+        <td><%= link_to 'Destroy', testrun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testrun', new_testrun_path %>

@@ -1,0 +1,22 @@
+<%= form_for(@trrisk) do |f| %>
+  <% if @trrisk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trrisk.errors.count, "error") %> prohibited this trrisk from being saved:</h2>
+
+      <ul>
+      <% @trrisk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="field">
+    <%= f.label :trrisk %><br>
+    <%= f.text_field :trrisk %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,27 @@
+<h1>Listing Test Run Risks</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Test Run Risk</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trrisks.each do |trrisk| %>
+      <tr>
+        <td><%= trrisk.trrisk %></td>
+        <td><%= link_to 'Show', trrisk %></td>
+        <td><%= link_to 'Edit', edit_trrisk_path(trrisk) %></td>
+        <td><%= link_to 'Destroy', trrisk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Run Risk', new_trrisk_path %>

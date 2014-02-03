@@ -1,0 +1,23 @@
+<%= form_for(@trsubsytem) do |f| %>
+  <% if @trsubsytem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trsubsytem.errors.count, "error") %> prohibited this trsubsytem from being saved:</h2>
+
+      <ul>
+      <% @trsubsytem.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+  <div class="field">
+    <%= f.label "Subsystem" %><br>
+    <%= f.text_field :trsubname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

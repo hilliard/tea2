@@ -1,0 +1,27 @@
+<h1>Listing Test Run Priorities</h1>
+
+<table class="table3">
+  <thead>
+    <tr>
+      <th>Test Run Priority</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trpriorities.each do |trpriority| %>
+      <tr>
+        <td><%= trpriority.trpriority %></td>
+        <td><%= link_to 'Show', trpriority %></td>
+        <td><%= link_to 'Edit', edit_trpriority_path(trpriority) %></td>
+        <td><%= link_to 'Destroy', trpriority, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Run Priority', new_trpriority_path %>

@@ -1,0 +1,23 @@
+<%= form_for(@trstatus) do |f| %>
+  <% if @trstatus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trstatus.errors.count, "error") %> prohibited this trstatus from being saved:</h2>
+
+      <ul>
+      <% @trstatus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+  <div class="field">
+    <%= f.label :trstatusname %><br>
+    <%= f.text_field :trstatusname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

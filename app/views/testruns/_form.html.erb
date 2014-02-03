@@ -1,0 +1,86 @@
+<%= form_for(@testrun) do |f| %>
+  <% if @testrun.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testrun.errors.count, "error") %> prohibited this testrun from being saved:</h2>
+
+      <ul>
+      <% @testrun.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+
+  <div class="field">
+    <%= f.label "Name" %><br>
+    <%= f.text_field :trname %>
+  </div>
+  <div class="field">
+    <%= f.label "Description" %><br>
+    <%= f.text_area :trdescription %>
+  </div>
+  <div class="field">
+    <%= f.label "Feature" %><br>
+    <%= f.text_field :trfeature %>
+  </div>
+  <div class="field">
+    <%= f.label "Tester" %><br>
+    <%= f.text_field :tester %>
+  </div>
+  <div class="field">
+    <%= f.label "Test Type" %><br>
+    <%= f.text_field :testtype %>
+  </div>
+  <div class="field">
+    <%= f.label "Status" %><br>
+    <%= f.text_field :trstatus %>
+  </div>
+  <div class="field">
+    <%= f.label "Priority" %><br>
+    <%= f.text_field :trpriority %>
+  </div>
+  <div class="field">
+    <%= f.label "OS" %><br>
+    <%= f.text_field :tros %>
+  </div>
+  <div class="field">
+    <%= f.label "Browser" %><br>
+    <%= f.text_field :trbrowser %>
+  </div>
+  <div class="field">
+    <%= f.label "Risk" %><br>
+    <%= f.text_field :trrisk %>
+  </div>
+  <div class="field">
+    <%= f.label "Start" %><br>
+    <%= f.time_select :trstart %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Stop" %><br>
+    <%= f.time_select :trstop %>
+  </div>
+
+   <div class="field">
+     <%= f.label "Executed Date" %><br>
+     <%= f.datetime_select :trexecdate %>
+   </div>
+  <div class="field">
+    <%= f.label "Requirement" %><br>
+    <%= f.text_field :trrequirement %>
+  </div>
+  <div class="field">
+    <%= f.label "Track ID" %><br>
+    <%= f.text_field :trtrackid %>
+  </div>
+  <div class="field">
+    <%= f.label "Test Case" %><br>
+    <%= f.text_field :testcase %>
+  </div>
+  <div class="actions">
+    <%= f.submit("Create") %>
+  </div>
+<% end %>
+</div>

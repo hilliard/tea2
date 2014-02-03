@@ -1,6 +1,26 @@
 Tea2::Application.routes.draw do
 
 
+  resources :testruns
+
+  resources :trsubsytems
+
+  resources :trrisks
+
+  resources :trpriorities
+
+  resources :trstatuses
+
+  resources :browsers
+
+  resources :os
+
+  resources :testtypes
+
+  resources :steps
+
+  resources :roles
+
   resources :testcases
 
   resources :tcsubsystems
@@ -37,7 +57,7 @@ Tea2::Application.routes.draw do
   get "account_settings" => "authentication#account_settings"
   put "account_settings" => "authentication#set_account_info"
 
-  get "role_settings" => "authentication#role_settings"
+  # get "role_settings" => "authentication#role_settings"
 
   get "forgot_password" => "authentication#forgot_password"
   put "forgot_password" => "authentication#send_password_reset_instructions"
@@ -52,7 +72,7 @@ Tea2::Application.routes.draw do
   put "new_role" => "authentication#create_role"
 
   get "admin_roles" => "admin#roles"
-  delete "role/:id" => "admin#delete_role", :as => "role"
+  # delete "role/:id" => "admin#delete_role", :as => "role"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

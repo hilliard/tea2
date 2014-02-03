@@ -1,0 +1,27 @@
+<h1>Listing Test Run Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test Run Status Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trstatuses.each do |trstatus| %>
+      <tr>
+        <td><%= trstatus.trstatusname %></td>
+        <td><%= link_to 'Show', trstatus %></td>
+        <td><%= link_to 'Edit', edit_trstatus_path(trstatus) %></td>
+        <td><%= link_to 'Destroy', trstatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Run Status', new_trstatus_path %>

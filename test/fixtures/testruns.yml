@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trname: MyString
+  trdescription: MyText
+  trfeature: MyString
+  tester: MyString
+  testtype: MyString
+  trstatus: MyString
+  trpriority: MyString
+  tros: MyString
+  trbrowser: MyString
+  trrisk: MyString
+  trstart: 2014-02-03 11:08:15
+  trexecdate: 2014-02-03 11:08:15
+  trstop: 2014-02-03 11:08:15
+  trrequirement: MyString
+  trtrackid: MyString
+  testcase_id: 
+
+two:
+  trname: MyString
+  trdescription: MyText
+  trfeature: MyString
+  tester: MyString
+  testtype: MyString
+  trstatus: MyString
+  trpriority: MyString
+  tros: MyString
+  trbrowser: MyString
+  trrisk: MyString
+  trstart: 2014-02-03 11:08:15
+  trexecdate: 2014-02-03 11:08:15
+  trstop: 2014-02-03 11:08:15
+  trrequirement: MyString
+  trtrackid: MyString
+  testcase_id: 

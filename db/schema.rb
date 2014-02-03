@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140131220839) do
+ActiveRecord::Schema.define(version: 20140203180815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "browsers", force: true do |t|
+    t.string   "brname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "os", force: true do |t|
+    t.string   "osname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reqdevstatuses", force: true do |t|
     t.string   "reqdevstatusname"
@@ -54,6 +66,21 @@ ActiveRecord::Schema.define(version: 20140131220839) do
     t.string   "reqtrackid"
   end
 
+  create_table "roles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "steps", force: true do |t|
+    t.string   "stepname"
+    t.integer  "testcase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "steps", ["testcase_id"], name: "index_steps_on_testcase_id", using: :btree
+
   create_table "tcstatuses", force: true do |t|
     t.string   "tcstatusname"
     t.datetime "created_at"
@@ -83,6 +110,59 @@ ActiveRecord::Schema.define(version: 20140131220839) do
     t.datetime "tcstarttime"
     t.datetime "tcstoptime"
     t.string   "tcstep"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "testruns", force: true do |t|
+    t.string   "trname"
+    t.text     "trdescription"
+    t.string   "trfeature"
+    t.string   "tester"
+    t.string   "testtype"
+    t.string   "trstatus"
+    t.string   "trpriority"
+    t.string   "tros"
+    t.string   "trbrowser"
+    t.string   "trrisk"
+    t.time     "trstart"
+    t.time     "trstop"
+    t.datetime "trexecdate"
+    t.string   "trrequirement"
+    t.string   "trtrackid"
+    t.integer  "testcase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "testruns", ["testcase_id"], name: "index_testruns_on_testcase_id", using: :btree
+
+  create_table "testtypes", force: true do |t|
+    t.string   "tname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trpriorities", force: true do |t|
+    t.string   "trpriority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trrisks", force: true do |t|
+    t.string   "trrisk"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trstatuses", force: true do |t|
+    t.string   "trstatusname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trsubsytems", force: true do |t|
+    t.string   "trsubname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

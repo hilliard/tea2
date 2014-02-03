@@ -1,0 +1,27 @@
+<h1>Listing Test Run Subsytems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test Run Subsystem</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trsubsytems.each do |trsubsytem| %>
+      <tr>
+        <td><%= trsubsytem.trsubname %></td>
+        <td><%= link_to 'Show', trsubsytem %></td>
+        <td><%= link_to 'Edit', edit_trsubsytem_path(trsubsytem) %></td>
+        <td><%= link_to 'Destroy', trsubsytem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Run Subsytem', new_trsubsytem_path %>
