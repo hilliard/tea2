@@ -27,31 +27,39 @@
   </div>
   <div class="field">
     <%= f.label "Tester" %><br>
-    <%= f.text_field :tester %>
+    <%#= f.text_field :tester %>
+    <%= f.collection_select(:tester, User.all, :username, :username, prompt: "Select a Tester") %>
   </div>
   <div class="field">
     <%= f.label "Test Type" %><br>
-    <%= f.text_field :testtype %>
+    <%#= f.text_field :testtype %>
+    <%= f.collection_select(:testtype, Testtype.all, :tname, :tname, prompt: "Select a Type") %>
   </div>
   <div class="field">
     <%= f.label "Status" %><br>
-    <%= f.text_field :trstatus %>
+    <%#= f.text_field :trstatus %>
+    <%= f.collection_select(:trstatus, Trstatus.all, :trstatusname, :trstatusname, prompt: "Select a Status") %>
+
   </div>
   <div class="field">
     <%= f.label "Priority" %><br>
-    <%= f.text_field :trpriority %>
+    <%#= f.text_field :trpriority %>
+    <%= f.collection_select(:trpriority, Trpriority.all, :trpriorityname, :trpriorityname, prompt: "Select a Priority") %>
   </div>
   <div class="field">
     <%= f.label "OS" %><br>
-    <%= f.text_field :tros %>
+    <%#= f.text_field :tros %>
+    <%= f.collection_select(:tros, O.all, :osname, :osname, prompt: "Select an OS") %>
   </div>
   <div class="field">
     <%= f.label "Browser" %><br>
-    <%= f.text_field :trbrowser %>
+    <%#= f.text_field :trbrowser %>
+    <%= f.collection_select(:trbrowser, Browser.all, :brname, :brname, prompt: "Select a Browser") %>
   </div>
   <div class="field">
     <%= f.label "Risk" %><br>
-    <%= f.text_field :trrisk %>
+    <%#= f.text_field :trrisk %>
+    <%= f.collection_select(:trrisk, Trrisk.all, :trriskname, :trriskname, prompt: "Select a Risk") %>
   </div>
   <div class="field">
     <%= f.label "Start" %><br>
@@ -80,7 +88,7 @@
     <%= f.text_field :testcase %>
   </div>
   <div class="actions">
-    <%= f.submit("Create") %>
+    <%= f.submit("Create", :class => "btn btn-primary") %>
   </div>
 <% end %>
 </div>

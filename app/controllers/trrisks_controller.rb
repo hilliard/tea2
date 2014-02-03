@@ -69,6 +69,6 @@ class TrrisksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trrisk_params
-      params.require(:trrisk).permit(:trrisk)
+      params.require(:trrisk).permit(:trriskname)
     end
 end

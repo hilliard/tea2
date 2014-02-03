@@ -14,6 +14,7 @@
     <legend><%= "#{ @testcase.tctitle } " unless @testcase.tctitle.nil?  %>Test Case Information</legend>
 
     <fieldset>
+
       <div class="field">
         <%= f.label "Title" %><br>
         <%= f.text_field :tctitle %>
@@ -22,6 +23,7 @@
         <%= f.label "Description" %><br>
         <%= f.text_area :tcdescription %>
       </div>
+
       <div class="field">
         <%= f.label "Precondition" %><br>
         <%= f.text_area :tcprecondition %>
@@ -57,7 +59,7 @@
         <%= f.check_box :tcactive %>
       </div>
       <div class="field">
-        <%= f.label "Req Reference" %><br>
+        <%= f.label "Requirement Reference" %><br>
         <%= f.text_field :tcreqreference %>
       </div>
       <div class="field">

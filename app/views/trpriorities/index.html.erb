@@ -13,7 +13,7 @@
   <tbody>
     <% @trpriorities.each do |trpriority| %>
       <tr>
-        <td><%= trpriority.trpriority %></td>
+        <td><%= trpriority.trpriorityname %></td>
         <td><%= link_to 'Show', trpriority %></td>
         <td><%= link_to 'Edit', edit_trpriority_path(trpriority) %></td>
         <td><%= link_to 'Destroy', trpriority, method: :delete, data: { confirm: 'Are you sure?' } %></td>

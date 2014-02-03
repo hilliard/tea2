@@ -1,7 +1,7 @@
 class CreateTrpriorities < ActiveRecord::Migration
   def change
     create_table :trpriorities do |t|
-      t.string :trpriority
+      t.string :trpriorityname
 
       t.timestamps
     end

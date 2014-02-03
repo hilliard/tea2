@@ -12,11 +12,14 @@
   <% end %>
   <div class="container">
   <div class="field">
-    <%= f.label :trrisk %><br>
-    <%= f.text_field :trrisk %>
+    <%= f.label "Test Run Risk" %><br>
+    <%= f.text_field :trriskname %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Create", :class => "btn btn-primary") %>
   </div>
 <% end %>
 </div>
+
+
+

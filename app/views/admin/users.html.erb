@@ -17,7 +17,7 @@
           <td><%= user.last_signed_in_on %></td>
           <td><%= link_to 'Show', account_settings_path %></td>
           <td><%= link_to 'Edit',  account_settings_path %></td>
-          <td><%= link_to 'Delete', user, :confirm => 'Are you sure?', :method => :delete %></td>
+          <td><%= link_to 'Delete', user, :data => { :confirm => 'Are You Sure?' }, :method => :delete %></td>
         </tr>
     <% end %>
   </table>

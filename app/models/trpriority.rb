@@ -1,3 +1,3 @@
 class Trpriority < ActiveRecord::Base
-  attr_accessible :trpriority
+  attr_accessible :trpriorityname
 end

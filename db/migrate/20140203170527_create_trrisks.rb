@@ -1,7 +1,7 @@
 class CreateTrrisks < ActiveRecord::Migration
   def change
     create_table :trrisks do |t|
-      t.string :trrisk
+      t.string :trriskname
 
       t.timestamps
     end

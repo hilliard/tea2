@@ -69,6 +69,6 @@ class TrprioritiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trpriority_params
-      params.require(:trpriority).permit(:trpriority)
+      params.require(:trpriority).permit(:trpriorityname)
     end
 end

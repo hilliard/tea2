@@ -144,7 +144,7 @@ ActiveRecord::Schema.define(version: 20140203180815) do
   end
 
   create_table "trpriorities", force: true do |t|
-    t.string   "trpriority"
+    t.string   "trpriorityname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -13,7 +13,7 @@
   <tbody>
     <% @trrisks.each do |trrisk| %>
       <tr>
-        <td><%= trrisk.trrisk %></td>
+        <td><%= trrisk.trriskname %></td>
         <td><%= link_to 'Show', trrisk %></td>
         <td><%= link_to 'Edit', edit_trrisk_path(trrisk) %></td>
         <td><%= link_to 'Destroy', trrisk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
