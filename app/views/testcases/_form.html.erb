@@ -52,7 +52,9 @@
       </div>
       <div class="field">
         <%= f.label "Author" %><br>
-        <%= f.text_field :tcauthor %>
+        <%#= f.text_field :tcauthor %>
+        <%= f.collection_select(:tcauthor, User.all, :username, :username, prompt: "Select an Author") %>
+
       </div>
       <div class="field">
         <%= f.label "Active" %><br>
@@ -64,7 +66,8 @@
       </div>
       <div class="field">
         <%= f.label "Modified By" %><br>
-        <%= f.text_field :tcmodifiedby %>
+        <%#= f.text_field :tcmodifiedby %>
+        <%= f.collection_select(:tcmodifiedby, User.all, :username, :username, prompt: "Modifier") %>
       </div>
       <div class="field">
         <%= f.label "Date Run" %><br>
@@ -72,11 +75,11 @@
       </div>
       <div class="field">
         <%= f.label "Start Time" %><br>
-        <%= f.datetime_select :tcstarttime %>
+        <%= f.datetime_select :tcstarttime, {discard_year: true} %>
       </div>
       <div class="field">
         <%= f.label "Stop Time" %><br>
-        <%= f.datetime_select :tcstoptime %>
+        <%= f.datetime_select :tcstoptime, {discard_year: true} %>
       </div>
   </fieldset>
 

@@ -1,6 +1,8 @@
 Tea2::Application.routes.draw do
 
 
+  resources :testsuites
+
   resources :testruns
 
   resources :trsubsytems

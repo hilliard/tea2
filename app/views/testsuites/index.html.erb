@@ -1,0 +1,57 @@
+<h1>Listing Test Suites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Feature</th>
+      <th>Tester</th>
+      <th>Test Type</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>OS</th>
+      <th>Browser</th>
+      <th>Risk</th>
+      <th>Start</th>
+      <th>Stop</th>
+      <th>Exec Date</th>
+      <th>Requirement</th>
+      <th>Track ID</th>
+      <th>Testrun</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testsuites.each do |testsuite| %>
+      <tr>
+        <td><%= testsuite.tsname %></td>
+        <td><%= testsuite.tsdescription %></td>
+        <td><%= testsuite.tsfeature %></td>
+        <td><%= testsuite.tstester %></td>
+        <td><%= testsuite.tstesttype %></td>
+        <td><%= testsuite.tsstatus %></td>
+        <td><%= testsuite.tspriority %></td>
+        <td><%= testsuite.tsos %></td>
+        <td><%= testsuite.tsbrowser %></td>
+        <td><%= testsuite.tsrisk %></td>
+        <td><%= testsuite.tsstart %></td>
+        <td><%= testsuite.tsstop %></td>
+        <td><%= testsuite.tsexecdate %></td>
+        <td><%= testsuite.tsrequirement %></td>
+        <td><%= testsuite.tstrackid %></td>
+        <td><%= testsuite.testrun %></td>
+        <td><%= link_to 'Show', testsuite %></td>
+        <td><%= link_to 'Edit', edit_testsuite_path(testsuite) %></td>
+        <td><%= link_to 'Destroy', testsuite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test Suite', new_testsuite_path %>

@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testsuite.tsname %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @testsuite.tsdescription %>
+</p>
+
+<p>
+  <strong>Feature:</strong>
+  <%= @testsuite.tsfeature %>
+</p>
+
+<p>
+  <strong>Tester:</strong>
+  <%= @testsuite.tstester %>
+</p>
+
+<p>
+  <strong>Test Type:</strong>
+  <%= @testsuite.tstesttype %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @testsuite.tsstatus %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @testsuite.tspriority %>
+</p>
+
+<p>
+  <strong>OS:</strong>
+  <%= @testsuite.tsos %>
+</p>
+
+<p>
+  <strong>Browser:</strong>
+  <%= @testsuite.tsbrowser %>
+</p>
+
+<p>
+  <strong>Risk:</strong>
+  <%= @testsuite.tsrisk %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @testsuite.tsstart %>
+</p>
+
+<p>
+  <strong>Stop:</strong>
+  <%= @testsuite.tsstop %>
+</p>
+
+<p>
+  <strong>Exec Date:</strong>
+  <%= @testsuite.tsexecdate %>
+</p>
+
+<p>
+  <strong>Requirement:</strong>
+  <%= @testsuite.tsrequirement %>
+</p>
+
+<p>
+  <strong>Track ID:</strong>
+  <%= @testsuite.tstrackid %>
+</p>
+
+<p>
+  <strong>Test Run:</strong>
+  <%= @testsuite.testrun %>
+</p>
+
+<%= link_to 'Edit', edit_testsuite_path(@testsuite) %> |
+<%= link_to 'Back', testsuites_path %>

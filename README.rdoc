@@ -20,6 +20,8 @@ No Third party plugins
 
  version controlled on github.com
 
+ Test Runs and Test Cases have a many to many relationshop to Test Steps
+
 * ...
 
 

@@ -19,19 +19,23 @@
     </div>
     <div class="field">
       <%= f.label "Owner" %><br>
-      <%= f.text_field :reqowner %>
+      <%#= f.text_field :reqowner %>
+      <%= f.collection_select(:reqowner, User.all, :username, :username, prompt: "Select an Owner") %>
     </div>
     <div class="field">
       <%= f.label "Status" %><br>
-      <%= f.text_field :reqstatus %>
+      <%#= f.text_field :reqstatus %>
+      <%= f.collection_select(:reqstatus, Reqstatus.all, :reqstatusname, :reqstatusname, prompt: "Select a Status") %>
     </div>
     <div class="field">
       <%= f.label "Priority" %><br>
-      <%= f.text_field :reqpriority %>
+      <%#= f.text_field :reqpriority %>
+      <%= f.collection_select(:reqpriority, Reqpriority.all, :reqpriorityname, :reqpriorityname, prompt: "Select a Priority") %>
     </div>
     <div class="field">
       <%= f.label "Difficulty" %><br>
-      <%= f.text_field :reqdifficulty %>
+      <%#= f.text_field :reqdifficulty %>
+      <%= f.collection_select(:reqdifficulty, Reqdifficulty.all, :reqdifficultyname, :reqdifficultyname, prompt: "Select a Difficulty") %>
     </div>
     <div class="field">
       <%= f.label "Dev Status" %><br>

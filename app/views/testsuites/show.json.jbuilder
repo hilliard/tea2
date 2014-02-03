@@ -1,0 +1,1 @@
+json.extract! @testsuite, :id, :tsname, :tsdescription, :tsfeature, :tstester, :tstesttype, :tsstatus, :tspriority, :tsos, :tsbrowser, :tsrisk, :tsstart, :tsstop, :tsexecdate, :tsrequirement, :tstrackid, :testrun_id, :created_at, :updated_at

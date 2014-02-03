@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203180815) do
+ActiveRecord::Schema.define(version: 20140203210104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,6 +137,29 @@ ActiveRecord::Schema.define(version: 20140203180815) do
 
   add_index "testruns", ["testcase_id"], name: "index_testruns_on_testcase_id", using: :btree
 
+  create_table "testsuites", force: true do |t|
+    t.string   "tsname"
+    t.text     "tsdescription"
+    t.string   "tsfeature"
+    t.string   "tstester"
+    t.string   "tstesttype"
+    t.string   "tsstatus"
+    t.string   "tspriority"
+    t.string   "tsos"
+    t.string   "tsbrowser"
+    t.string   "tsrisk"
+    t.datetime "tsstart"
+    t.datetime "tsstop"
+    t.date     "tsexecdate"
+    t.string   "tsrequirement"
+    t.string   "tstrackid"
+    t.integer  "testrun_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "testsuites", ["testrun_id"], name: "index_testsuites_on_testrun_id", using: :btree
+
   create_table "testtypes", force: true do |t|
     t.string   "tname"
     t.datetime "created_at"
@@ -150,7 +173,7 @@ ActiveRecord::Schema.define(version: 20140203180815) do
   end
 
   create_table "trrisks", force: true do |t|
-    t.string   "trrisk"
+    t.string   "trriskname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

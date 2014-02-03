@@ -1,0 +1,90 @@
+<%= form_for(@testsuite) do |f| %>
+  <% if @testsuite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testsuite.errors.count, "error") %> prohibited this testsuite from being saved:</h2>
+
+      <ul>
+      <% @testsuite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container">
+  <div class="field">
+    <%= f.label "Name" %><br>
+    <%= f.text_field :tsname %>
+  </div>
+  <div class="field">
+    <%= f.label "Description" %><br>
+    <%= f.text_area :tsdescription %>
+  </div>
+  <div class="field">
+    <%= f.label "Feature" %><br>
+    <%= f.text_field :tsfeature %>
+  </div>
+  <div class="field">
+    <%= f.label "Tester" %><br>
+    <%#= f.text_field :tstester %>
+    <%= f.collection_select(:tstester, User.all, :username, :username, prompt: "Select a Tester") %>
+  </div>
+  <div class="field">
+    <%= f.label "Test Type" %><br>
+    <%#= f.text_field :tstesttype %>
+    <%= f.collection_select(:tstesttype, Testtype.all, :tname, :tname, prompt: "Select a Type") %>
+  </div>
+  <div class="field">
+    <%= f.label "Status" %><br>
+    <%#= f.text_field :tsstatus %>
+    <%= f.collection_select(:tsstatus, Trstatus.all, :trstatusname, :trstatusname, prompt: "Select a Status") %>
+  </div>
+  <div class="field">
+    <%= f.label "Priority" %><br>
+    <%#= f.text_field :tspriority %>
+    <%= f.collection_select(:tspriority, Trpriority.all, :trpriorityname, :trpriorityname, prompt: "Select a Priority") %>
+  </div>
+  <div class="field">
+    <%= f.label "OS" %><br>
+    <%#= f.text_field :tsos %>
+    <%= f.collection_select(:tsos, O.all, :osname, :osname, prompt: "Select an OS") %>
+  </div>
+  <div class="field">
+    <%= f.label "Browser" %><br>
+    <%#= f.text_field :tsbrowser %>
+    <%= f.collection_select(:tsbrowser, Browser.all, :brname, :brname, prompt: "Select a Browser") %>
+  </div>
+  <div class="field">
+    <%= f.label "Risk" %><br>
+    <%#= f.text_field :tsrisk %>
+    <%= f.collection_select(:tsrisk, Trrisk.all, :trriskname, :trriskname, prompt: "Select a Risk") %>
+  </div>
+  <div class="field">
+    <%= f.label "Start" %><br>
+    <%= f.datetime_select :tsstart, {discard_year: true} %>
+  </div>
+  <div class="field">
+    <%= f.label "Stop" %><br>
+    <%= f.datetime_select :tsstop, {discard_year: true} %>
+  </div>
+  <div class="field">
+    <%= f.label "Exec Date" %><br>
+    <%= f.date_select :tsexecdate %>
+  </div>
+  <div class="field">
+    <%= f.label "Requirement" %><br>
+    <%= f.text_field :tsrequirement %>
+  </div>
+  <div class="field">
+    <%= f.label "Track ID" %><br>
+    <%= f.text_field :tstrackid %>
+  </div>
+  <div class="field">
+    <%= f.label "Testrun" %><br>
+    <%= f.text_field :testrun %>
+  </div>
+  <div class="actions">
+    <%= f.submit("Create",:class => "btn btn-primary") %>
+  </div>
+<% end %>
+</div>
